@@ -318,6 +318,23 @@ hr.bottom-hr {
         width: 100%;
         margin: 8% 0;
     }
+    section.hr-img img{
+        height: 22vh;
+    }
+    /* Services Page */
+    section.cards {
+		flex-direction: column;
+	}
+
+	section.cards div{
+		width: 100%;
+    }
+    .bottom-services {
+		flex-direction: column-reverse;
+	}
+	.bottom-services div {
+		width: 100%;
+	}
     footer{
         margin: 10% 0;
     }
