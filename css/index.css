@@ -1,3 +1,341 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+	/* border: 1px solid grey; */
+	max-width: 100%;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+button:focus {
+	outline: none;
+}
+
+hr{
+    background-color: black;
+    border-color: black;
+}
+
+/* Nav styles */
+
+nav {
+	display: flex;
+	padding-top: 1%;
+	/* background-color: #5677e6; */
+	justify-content: space-between;
+	align-content: flex-end;
+}
+
+.links {
+	display: flex;
+	width: 80%;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+nav .logo {
+	margin-right: 1%;
+}
+
+nav a {
+	text-decoration: none;
+	color: gray;
+}
+
+nav a:hover {
+	color:black;
+}
+
+/* JS class for scrolling navbar */
+
+.fixed {
+	position: sticky;
+	top: 0;
+}
 
 
+/* Header Styles */
+
+header {
+	display: flex;
+}
+
+header div{
+	width: 50%;
+	text-align: center;
+	padding: 2% 0;
+}
+
+header h1 {
+	font-size: 5rem;
+}
+
+header button {
+	background: white;
+	border: 2px solid gray;
+	padding: 1% 6%;
+}
+
+header button:hover {
+	background: gray;
+	color: white;
+}
+
+/* Top Section Styles */
+
+.top {
+	display: flex;
+	justify-content: space-around;
+	margin: 3% 0;
+}
+
+.top div {
+	width: 45%;
+}
+
+.hr-img img{
+	display: flex;
+	width: 100%;
+}
+
+/* Bottom Section Styles */
+
+.bottom {
+	display: flex;
+	margin: 3% 0;
+	justify-content: space-around;
+}
+
+.bottom div {
+	width: 30%;
+}
+
+/* Address Styles */
+
+address {
+	margin: 3% 0;
+}
+
+/* Footer Styles */
+
+footer {
+	text-align: center;
+	margin-bottom: 4%;
+}
+
+/* Services Page Styles */
+
+.services {
+	display: block;
+	margin: 3% 0;
+}
+
+.services h2 {
+	font-size: 2rem;
+}
+
+/* Cards Section */
+
+section.cards {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+section.cards div {
+	width: 45%;
+	margin: 2% 0;
+	background-color: #e0dedc;
+	padding: 2%;
+	border: 2px solid black;
+}
+
+section.cards button {
+	padding: 2% 6%;
+	border-radius: 5px;
+	border: 1px solid black;
+	background: white;
+}
+
+section.cards button:hover {
+	color: white;
+	background: #a19f9e;
+}
+
+section.cards p {
+	margin-bottom: 4%;
+}
+
+hr.bottom-hr {
+	border: 1px solid black;
+	margin: 4% 0;
+	background-color: black;
+}
+
+/* Last Section on Service page */
+
+.bottom-services {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10%;
+}
+
+.bottom-services div {
+	width: 45%;
+}
+
+.bottom-services p {
+	margin-bottom: 5%;
+	line-height: 1.3;
+}
+
+.bottom-services ul {
+	margin-left: 5%;
+	list-style: square;
+}
+
+.bottom-services li {
+	margin-bottom: 5%;
+}
+
+.bottom-services img {
+	width: 100%;
+}
+
+/* Media Queries */
+
+/* Tablet */
+
+@media (max-width: 800px){
+    .container{
+        width:90%;
+    }
+    nav{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .links{
+        width:100%;
+        justify-content: space-between;
+    }
+    nav div{
+        margin: 3% 0;
+    }
+    .hero2{
+        display: none;
+    }
+    .hero1{
+        width: 100%;
+        margin: 4% 0;
+    }
+}
+
+/* Mobile */
+@media (max-width: 500px){
+	.links {
+        width: 100%;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .links a{
+        display:flex;
+        width: 100%;
+        height: 9vh;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+    }
+    .hero1 h1{
+        font-size: 3rem;
+    }
+    section.top, section.bottom {
+		flex-direction: column;
+	}
+    section.top div, section.bottom div{
+        width: 100%;
+        margin: 8% 0;
+    }
+    section.hr-img img{
+        height: 22vh;
+    }
+    /* Services Page */
+    section.cards {
+		flex-direction: column;
+	}
+
+	section.cards div{
+		width: 100%;
+    }
+    .bottom-services {
+		flex-direction: column-reverse;
+	}
+	.bottom-services div {
+		width: 100%;
+	}
+    footer{
+        margin: 10% 0;
+    }
+}
